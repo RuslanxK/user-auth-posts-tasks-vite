@@ -1,4 +1,4 @@
-import React, { useState, ReactNode, useCallback, useEffect } from 'react';
+import React, { useState, ReactNode, useCallback } from 'react';
 import Cookies from 'js-cookie';
 import { AuthContext } from './AuthContext';
 
@@ -6,9 +6,7 @@ interface AuthProviderProps {
   children: ReactNode;
 }
 
-interface DecodedToken {
-  exp: number; 
-}
+
 
 export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
   const [email, setEmail] = useState<string>(Cookies.get('email') || '');

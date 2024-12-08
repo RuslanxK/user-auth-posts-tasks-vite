@@ -6,7 +6,7 @@ interface AuthContextType {
   username: string;
   setAuth: (email: string, token: string, username: string) => void;
   logout: () => void;
-  isValidToken: () => boolean;
+  
 }
 
 export const AuthContext = createContext<AuthContextType | undefined>(undefined);
